@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bug Tracker - Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bug Tracker Board</h1>
+  
+  <div class="top-controls">
+    <button id="addTaskBtn">+ Tambah Bug</button>
+  </div>
+
+  <div class="board">
+    <div class="column" data-status="found">
+      <h2>Bug Ditemukan</h2>
+      <div class="task-list" id="found"></div>
+    </div>
+
+    <div class="column" data-status="progress">
+      <h2>Dalam Perbaikan</h2>
+      <div class="task-list" id="progress"></div>
+    </div>
+
+    <div class="column" data-status="fixed">
+      <h2>Sudah Fixed</h2>
+      <div class="task-list" id="fixed"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modalTitle">Catatan Perbaikan</h3>
+      <textarea id="noteInput" placeholder="Tulis catatan..."></textarea>
+      <button id="saveNoteBtn">Simpan</button>
+    </div>
+  </div>
+
+  <!-- Modal Readonly -->
+  <div class="modal" id="viewModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Catatan Perbaikan</h3>
+      <p id="noteView"></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
